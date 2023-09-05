@@ -1,0 +1,77 @@
+html,body{
+    background-color: rgb(242, 83, 242);
+}
+
+.solar-system{
+    position: relative;
+    width: 780px;
+    height: 780px;
+    margin: auto;
+    overflow: hidden;
+}
+
+
+.orbit{
+    border: 1px dashed #666
+
+}
+#sun,
+.orbit,
+.orbit + div,
+.orbit + div > div{
+    position: absolute;
+}
+
+#sun,
+.orbit,
+.orbit + div{
+    top: 50%;
+    left: 50%;
+}
+
+.orbit + div > div{
+    top: 0%;
+    left: 50%;
+}
+.orbit + div div{
+    top: 0%;
+    left: 50%;
+}
+.orbit,
+.orbit + div div,
+#eart{
+    border-radius: 50%;
+}
+
+#sun{
+    height: 200px;
+    width: 200px;
+    background-color: #eb896c;
+    margin-top: -100px;
+    margin-left: -100px;
+    border-radius: 50%;
+    box-shadow: 0 0 84px rgb(246, 224, 55);
+}
+#mercury{
+    margin-top: -13.5px;
+    margin-left: -13.5px;
+    height: 25px;
+    width: 25px;
+    background-color: #c78ecd;
+}
+.mercury,
+.mercury-spin{
+    width: 280px;
+    height: 280px;
+    margin-left: -140px;
+    margin-top: -140px;
+}
+@keyframes spin-right{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.mercury-spin{
+    animation: spin-right 8.8s linear infinite;
+}
